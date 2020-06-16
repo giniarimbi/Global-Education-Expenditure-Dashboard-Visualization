@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  ​
+  <title>Project 2</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/indexStyle.css') }}">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!--Nav Bar "Lattitude" using "fixed-top" for nav bar to stick on the top of the page-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">
+      <img src="img/img_icon.jpg" width="30 class=" d-inline-block align-top" alt="">Project 2 Group 1</a>
+
+    <!--Collapse buttons Plots, Comparison, Data into Menu Button when display change -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--id has to be the same name as data-target above otherwise it won't go into the menu button  -->
+    <!--everything between tags <div class="collapse navbar-collapse"> and </dev> will be put into the menu bar
+        when the window was shrinked -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/api">API</a>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+      </ul>
+
+    </div>
+    <!--end of collapse-->
+
+  </nav>
+  <!--end of navbar-->
+
+  <!-- <div class="jumbotron"> -->
+
+  <div class="w3-container w3-gray">
+
+    <!--Start 1st Row-->
+    <section class="row">
+      <!--1st Column -->
+      <!--Project Purposes-->
+      <div class="col-lg-8">
+        <div id="add_img_bk" class="jumbotron">
+          <h3>Impact of Education Expenditures on Life Quality</h3>
+          <hr class="my-4">
+          <img class="img-fluid float-left" id="thumbnail_summary"
+            src="{{ url_for('static', filename='img/education_expenses.png') }}"
+            alt="Education Expenses" />
+          <!--{{ url_for('static', filename='css/indexStyle.css') }}-->
+
+          <p>The purpose of this project was to analyze how education investment impacts the quality of people's lives around the world. 
+            Our hypothesis is that the more a country invest in education, the higher the overall standard of living, and therefore a higher return on that investment. 
+            We expect to see four related attributes influenced by higher levels of investment. </p>
+          <br>
+          <p>We gathered data from the CIA World Factbook, using the last 13 years data from 250 countries.</p>
+          <br>
+          <img class="img-fluid float-left" id="thumbnail_summary" class="image2"
+          src="{{ url_for('static', filename='img/parameter.png') }}"
+          alt="parameter" />
+          <br>
+          <br>
+          <p>Our site provides the source data and visualizations created as part of the analysis, as well as 
+                explantions and descriptions of trends and correlations we discovered.</p>
+          <br>
+          <p>Click thumbnails on the right to navigate the 3 visualization: world map, ranking study, and correlation study.</p>
+          
+
+        </div>
+        <!--jumbotron-->
+      </div>
+      <!--col lg 8-->
+
+      <!--2st Column -->
+      <!-- Visualizations imageNav Area -->
+
+      <div class="col-lg-4">
+        <div class="jumbotron">
+          <!-- <section id="imageNav-area"> -->
+          <div class="imageNav-content">
+            <h2 class="imageNav-header">Visualizations</h2>
+            <hr />
+            <div>
+              <a href="/map"><img class="thumbnail_Visualizations" src="{{ url_for('static', filename='img/world_map.png') }}" alt="World Map"
+                  class="img-fluid img-thumbnail"></a>
+              <a href="/scatter"><img class="thumbnail_Visualizations" src="{{ url_for('static', filename='img/scatter.png') }}" alt="Scatter Chart" class="img-fluid img-thumbnail"></a>
+              <a href="/bar"><img class="thumbnail_Visualizations" src="{{ url_for('static', filename='img/barchart.png') }}" alt="Bar Chart" class="img-fluid img-thumbnail"></a>
+
+            </div>
+            <!--end of images-->
+          </div>
+          <!--end of imagesNav-content-->
+        </div>
+        <!--jumbotron-->
+      </div>
+      <!--col-lg-4-->
+
+    </section>
+    <!--end of 1st Row-->
+  </div>
+  <!--end of container-->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body{font-family: 'Montserrat',sans-serif;}
+
+#thumbnail_summary{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 60px;      
+    box-shadow: 0 0 2px 1px rgba(209, 209, 209, 0.5);    
+}
+
+#pad_heading{
+    margin-top: 90px;
+    margin-left: 50px;
+}
+
+.jumbotron{
+    margin-top: 0px;
+    background-image: url("img/edu_bk.jpg");
+    background-size: cover;
+}
+#add_img_bk{
+    margin-top: 20px;
+    background-image: url("img/edu_bk.jpg");
+    background-size: cover;
+
+
+}
+
+.thumbnail_Visualizations{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    width: 150px;      
+    box-shadow: 0 0 2px 1px rgba(209, 209, 209, 0.5);    
+}
+
+
+.plot{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    width: 550px;      
+    box-shadow: 0 0 2px 1px rgba(209, 209, 209, 0.5);    
+}
+
+body{
+    background-image: url("img/edu_bk.jpg");
+}
+
+.image2{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
